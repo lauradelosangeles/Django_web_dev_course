@@ -1,0 +1,114 @@
+{% extends "hub/en/base.html" %}
+{% block title %}Home &mdash; {{ nombre_docente }}{% endblock %}
+
+{% block content %}
+
+<!-- ══════════════════════════════════════════════════════ HERO -->
+<section class="hero">
+  <div class="hero-blob-1"></div>
+  <div class="hero-blob-2"></div>
+  <div class="hero-dots"></div>
+
+  <div class="container position-relative text-center py-5" style="z-index:1;">
+
+    <div class="glow-av">{{ iniciales }}</div>
+
+    <div class="hero-tag">Teacher &middot; Personal Hub</div>
+
+    <h1 class="hero-title mb-3">{{ nombre_docente }}</h1>
+
+    <p class="hero-sub mb-1">{{ icono_materia }} Teacher of {{ materia }}</p>
+    <p class="hero-inst mb-4">{{ institucion }}</p>
+
+    <p class="hero-quote mx-auto mb-5">&ldquo;{{ frase_mision }}&rdquo;</p>
+
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="{% url 'recursos_en' %}" class="btn-p">View Resources &rarr;</a>
+      <a href="{% url 'contacto_en' %}" class="btn-s">Contact Me</a>
+    </div>
+  </div>
+
+  <span class="scroll-dot">&#8964;</span>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ STATS -->
+<section class="stats-bar py-5">
+  <div class="container">
+    <div class="row g-0 text-center">
+      <div class="col-4" style="border-right: 1px solid var(--c-border);">
+        <span class="stat-num">{{ anos_experiencia }}</span>
+        <span class="stat-lbl">{{ stat_lbl_anos }}</span>
+      </div>
+      <div class="col-4" style="border-right: 1px solid var(--c-border);">
+        <span class="stat-num">{{ num_estudiantes }}</span>
+        <span class="stat-lbl">{{ stat_lbl_estudiantes }}</span>
+      </div>
+      <div class="col-4">
+        <span class="stat-num">{{ num_materias }}</span>
+        <span class="stat-lbl">{{ stat_lbl_materias }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ CARDS -->
+<section style="background: var(--c-bg); padding: 5.5rem 0;">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="section-tag">My digital space</span>
+      <h2 class="section-title mt-1">Everything my students<br>need in one place</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-lg-3">
+        <a href="{% url 'acerca_en' %}" class="card-f">
+          <div class="card-icon-box light">&#128104;&#8205;&#127979;</div>
+          <p class="card-ttl" style="color: var(--c-navy);">About Me</p>
+          <p class="card-txt" style="color: var(--c-muted);">{{ desc_card_sobre_mi }}</p>
+          <span class="card-arrow">View profile &rarr;</span>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card-f dark">
+          <div class="card-icon-box dark-icon">{{ icono_materia }}</div>
+          <p class="card-ttl">{{ materia }}</p>
+          <p class="card-txt" style="color: rgba(255,255,255,.68);">{{ desc_card_materias }}</p>
+          <span class="card-arrow">My subjects &rarr;</span>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <a href="{% url 'recursos_en' %}" class="card-f">
+          <div class="card-icon-box light">&#128279;</div>
+          <p class="card-ttl" style="color: var(--c-navy);">Resources</p>
+          <p class="card-txt" style="color: var(--c-muted);">{{ desc_card_recursos }}</p>
+          <span class="card-arrow">Explore &rarr;</span>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <a href="{% url 'contacto_en' %}" class="card-f">
+          <div class="card-icon-box light">&#9993;</div>
+          <p class="card-ttl" style="color: var(--c-navy);">Contact</p>
+          <p class="card-txt" style="color: var(--c-muted);">{{ desc_card_contacto }}</p>
+          <span class="card-arrow">Write to me &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ QUOTE -->
+<section class="qs" style="padding: 5.5rem 0;">
+  <div class="container text-center" style="max-width: 740px;">
+    <span class="qs-mark">&ldquo;</span>
+    <p class="qs-text mt-n3 mb-4">{{ frase_mision }}</p>
+    <span class="qs-by">&mdash; {{ nombre_docente }} &middot; {{ materia }}</span>
+  </div>
+</section>
+
+{% endblock %}

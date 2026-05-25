@@ -1,28 +1,27 @@
-﻿{% load static %}
+{% load static %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block titulo %}Hub Docente{% endblock %}</title>
+    <title>{% block titulo %}Teacher Hub{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="{% url 'inicio' %}">{{ nombre_docente }}</a>
+            <a class="navbar-brand fw-bold" href="{% url 'inicio_en' %}">{{ nombre_docente }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'acerca' %}">Acerca</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'recursos' %}">Recursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'inicio_en' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'acerca_en' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'recursos_en' %}">Resources</a></li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link fw-bold" href="{% url 'inicio_en' %}" style="color: #f0b429;">🌐 EN</a>
+                        <a class="nav-link fw-bold" href="{% url 'inicio' %}" style="color: #f0b429;">🌐 ES</a>
                     </li>
                 </ul>
             </div>
@@ -34,7 +33,7 @@
     </main>
 
     <footer class="bg-primary text-white text-center py-3 mt-5">
-        <small>Hub de <strong>{{ nombre_docente }}</strong> &middot; Construido con Django</small>
+        <small>Hub of <strong>{{ nombre_docente }}</strong> &middot; Built with Django</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

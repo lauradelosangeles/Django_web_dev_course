@@ -1,7 +1,7 @@
 ﻿from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Recurso, Mensaje
-from .forms import ContactoForm
+from .forms import ContactoForm, ContactoFormEN
 
 # ════════════════════════════════════════════════════════════
 #  ZONA DE PERSONALIZACIÓN — edita solo esta sección
@@ -79,3 +79,67 @@ def contacto(request):
     else:
         form = ContactoForm()
     return render(request, 'hub/contacto.html', _ctx({'form': form}))
+
+
+# ════════════════════════════════════════════════════════════
+#  ENGLISH VIEWS  (/en/*)
+# ════════════════════════════════════════════════════════════
+
+def _ctx_en(extra=None):
+    """Context helper with English content and stat labels."""
+    base = {
+        'nombre_docente': 'Teacher Gonzalez Silva',
+        'iniciales': iniciales,
+        'materia': 'Mathematics',
+        'institucion': 'School Piquero',
+        'anos_experiencia': anos_experiencia,
+        'num_estudiantes': num_estudiantes,
+        'num_materias': num_materias,
+        'correo': 'prof.gonzalezsilva@school.edu',
+        'frase_mision': 'Every student can master mathematics with the right guidance.',
+        'icono_materia': icono_materia,
+        'stat_lbl_anos': 'Years of Experience',
+        'stat_lbl_estudiantes': 'Students Taught',
+        'stat_lbl_materias': 'Active Subjects',
+    }
+    if extra:
+        base.update(extra)
+    return base
+
+
+def inicio_en(request):
+    return render(request, 'hub/en/inicio.html', _ctx_en({
+        'desc_card_sobre_mi': f'My background, teaching philosophy and {anos_experiencia} years educating students in Mathematics.',
+        'desc_card_materias': f'Active groups this semester with materials and activities at School Piquero.',
+        'desc_card_recursos': 'Materials and tools available in the resources database.',
+        'desc_card_contacto': 'Have questions? Write to me directly and I will reply shortly.',
+    }))
+
+
+def about_en(request):
+    return render(request, 'hub/en/acerca.html', _ctx_en())
+
+
+def resources_en(request):
+    return render(request, 'hub/en/recursos.html', _ctx_en({'recursos': Recurso.objects.all()}))
+
+
+def contact_en(request):
+    if request.method == 'POST':
+        form = ContactoFormEN(request.POST)
+        if form.is_valid():
+            Mensaje.objects.create(
+                nombre=form.cleaned_data['nombre'],
+                correo=form.cleaned_data['correo'],
+                mensaje=form.cleaned_data['mensaje'],
+            )
+            messages.success(
+                request,
+                f'Thank you, {form.cleaned_data["nombre"]}! Your message was received. I will get back to you soon.',
+            )
+            return redirect('contacto_en')
+        else:
+            messages.error(request, 'Please fix the errors in the form.')
+    else:
+        form = ContactoFormEN()
+    return render(request, 'hub/en/contacto.html', _ctx_en({'form': form}))

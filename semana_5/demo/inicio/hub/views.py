@@ -34,3 +34,35 @@ def recursos_view(request):
         'recursos': recursos,
     })
 
+
+# ════════════════════════════════════════════════════════════
+#  ENGLISH VIEWS  (/en/*)
+# ════════════════════════════════════════════════════════════
+
+def inicio_en(request):
+    return render(request, 'hub/en/inicio.html', {
+        'nombre_docente': 'Teacher Gonzalez Silva',
+        'materia': 'Mathematics',
+        'institucion': 'School Piquero',
+        'frase_mision': 'Every student can master mathematics with the right guidance.',
+    })
+
+
+def about_en(request):
+    return render(request, 'hub/en/acerca.html', {
+        'nombre_docente': 'Teacher Gonzalez Silva',
+        'materia': 'Mathematics',
+        'institucion': 'School Piquero',
+        'correo': 'prof.gonzalezsilva@school.edu',
+        'anos_experiencia': anos_experiencia,
+        'frase_mision': 'Every student can master mathematics with the right guidance.',
+    })
+
+
+def resources_en(request):
+    from .models import Recurso
+    return render(request, 'hub/en/recursos.html', {
+        'nombre_docente': 'Teacher Gonzalez Silva',
+        'recursos': Recurso.objects.all(),
+    })
+

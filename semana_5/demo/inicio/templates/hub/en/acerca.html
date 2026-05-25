@@ -1,0 +1,30 @@
+{% extends "hub/en/base.html" %}
+
+{% block titulo %}About — {{ nombre_docente }}{% endblock %}
+
+{% block contenido %}
+<div class="container py-5" style="max-width: 700px;">
+    <h1 class="text-primary mb-4">About {{ nombre_docente }}</h1>
+
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p class="fst-italic">&ldquo;{{ frase_mision }}&rdquo;</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <dl class="row">
+        <dt class="col-sm-4">Institution</dt>
+        <dd class="col-sm-8">{{ institucion }}</dd>
+
+        <dt class="col-sm-4">Teaching area</dt>
+        <dd class="col-sm-8">{{ materia }}</dd>
+
+        <dt class="col-sm-4">Experience</dt>
+        <dd class="col-sm-8">{{ anos_experiencia }} years</dd>
+    </dl>
+
+    <a href="{% url 'inicio_en' %}" class="btn btn-outline-primary mt-3">&larr; Back to home</a>
+</div>
+{% endblock %}

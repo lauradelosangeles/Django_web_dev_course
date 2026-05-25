@@ -1,0 +1,39 @@
+{% extends "hub/en/base.html" %}
+
+{% block titulo %}Resources — {{ nombre_docente }}{% endblock %}
+
+{% block contenido %}
+<div class="container py-5">
+    <h1 class="text-primary mb-4">Student Resources</h1>
+
+    {% if recursos %}
+    <div class="row g-4">
+        {% for recurso in recursos %}
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ recurso.url }}" target="_blank" class="text-decoration-none text-primary">
+                            {{ recurso.titulo }}
+                        </a>
+                    </h5>
+                    <p class="card-text text-muted">{{ recurso.descripcion }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ recurso.url }}" target="_blank" class="btn btn-sm btn-outline-primary">
+                        Open site &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-info">
+        No resources available yet! Check back soon.
+    </div>
+    {% endif %}
+
+    <a href="{% url 'inicio_en' %}" class="btn btn-outline-secondary mt-4">&larr; Back to home</a>
+</div>
+{% endblock %}

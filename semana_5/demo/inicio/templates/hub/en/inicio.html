@@ -1,0 +1,19 @@
+{% extends "hub/en/base.html" %}
+
+{% block titulo %}Home — {{ nombre_docente }}{% endblock %}
+
+{% block contenido %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary">{{ nombre_docente }}</h1>
+        <p class="lead text-muted">Teacher of {{ materia }} &middot; {{ institucion }}</p>
+        <blockquote class="blockquote mt-3">
+            <p class="mb-0 fst-italic">&ldquo;{{ frase_mision }}&rdquo;</p>
+        </blockquote>
+        <div class="mt-4">
+            <a href="{% url 'recursos_en' %}" class="btn btn-primary me-2">View Resources &rarr;</a>
+            <a href="{% url 'acerca_en' %}" class="btn btn-outline-primary">About Me</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "hub/en/base.html" %}
+{% block title %}Resources &mdash; {{ nombre_docente }}{% endblock %}
+
+{% block content %}
+
+<!-- ══════════════════════════════════════════════════════ PAGE HEADER -->
+<header class="ph">
+  <div class="ph-glow"></div>
+  <div class="container text-center text-white position-relative" style="z-index:1;">
+    <div class="hero-tag mb-3">Learning Materials</div>
+    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2.2rem,5vw,3.4rem); font-weight:700; letter-spacing:-.025em; color:#fff; margin-bottom:.6rem;">
+      Student Resources
+    </h1>
+    <p style="color:rgba(255,255,255,.55); font-size:.95rem; margin:0;">
+      Materials and tools for {{ materia }}
+    </p>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════ RESOURCES -->
+<section style="padding: 5rem 0;">
+  <div class="container">
+
+    {% if recursos %}
+    <div class="row g-4">
+      {% for recurso in recursos %}
+      <div class="col-md-4">
+        <div class="rec-card">
+          <span class="rec-num">{{ forloop.counter }}</span>
+          <div class="rec-title">
+            <a href="{{ recurso.url }}" target="_blank" rel="noopener">{{ recurso.titulo }}</a>
+          </div>
+          {% if recurso.descripcion %}
+          <p class="rec-desc">{{ recurso.descripcion }}</p>
+          {% endif %}
+          <a href="{{ recurso.url }}" target="_blank" rel="noopener" class="btn-rec">
+            Open site &rarr;
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <div class="text-center py-5">
+      <div style="font-size:4rem; margin-bottom:1.5rem; opacity:.35;">&#128218;</div>
+      <h3 style="font-family:'Playfair Display',serif; color:var(--c-navy); margin-bottom:.75rem;">
+        No resources available yet
+      </h3>
+      <p style="color:var(--c-muted); max-width:360px; margin:0 auto 2rem;">
+        The teacher hasn&rsquo;t published any materials yet. Check back soon!
+      </p>
+    </div>
+    {% endif %}
+
+    <div class="mt-5">
+      <a href="{% url 'inicio_en' %}" class="btn-outline-nv">&larr; Back to home</a>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
