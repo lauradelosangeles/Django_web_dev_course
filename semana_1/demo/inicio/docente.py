@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # SEMANA 1 — INICIO: De variables sueltas a una clase
 # Ejecutar: python docente.py
 # ============================================================
@@ -7,7 +7,7 @@
 # ════════════════════════════════════════════════════════════
 # PROBLEMA: datos sueltos, sin estructura
 # ════════════════════════════════════════════════════════════
-nombre      = "Prof. García"
+nombre      = "Prof. González Silva"
 materia     = "Matemáticas"
 institucion = "Colegio Simón Bolívar"
 experiencia = 10
@@ -40,7 +40,7 @@ class Docente:
 
 # ── Uso (descomentar al terminar __init__ y presentarse) ────
 # docente_1 = Docente(
-#     "Prof. García", "Matemáticas", "C. Simón Bolívar", 10,
+#     "Prof. González Silva", "Matemáticas", "C. Simón Bolívar", 10,
 #     materias=["Álgebra — 8° grado", "Geometría — 9°", "Precálculo — 10°"],
 # )
 # docente_2 = Docente("Prof. Rodríguez", "Historia", "Liceo Central", 5)

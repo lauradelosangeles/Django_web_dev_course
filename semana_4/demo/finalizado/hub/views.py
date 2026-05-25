@@ -4,7 +4,7 @@ from .models import Recurso
 # ════════════════════════════════════════════════════════════
 #  ZONA DE PERSONALIZACIÓN — edita solo esta sección
 # ════════════════════════════════════════════════════════════
-nombre_docente   = "Prof. García"
+nombre_docente   = "Prof. González Silva"
 iniciales        = "PG"
 materia          = "Matemáticas"
 institucion      = "Colegio Dolores Sucre"

@@ -1,7 +1,7 @@
 ﻿from django.shortcuts import render
 from .models import Recurso
 
-nombre_docente   = "Prof. García"
+nombre_docente   = "Prof. González Silva"
 materia          = "Matemáticas"
 institucion      = "Colegio Dolores Sucre"
 anos_experiencia = "10"

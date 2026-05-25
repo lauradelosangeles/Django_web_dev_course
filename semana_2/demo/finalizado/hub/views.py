@@ -5,14 +5,14 @@
 # ════════════════════════════════════════════════════════════
 
 # — Información personal —
-nombre_docente   = "Prof. González"
-iniciales        = "PG"
+nombre_docente   = "Prof. González Silva"
+iniciales        = "PGS"
 materia          = "Matemáticas"
 institucion      = "Colegio Dolores Sucre"
 anos_experiencia = "5"
 num_estudiantes  = "300+"
 num_materias     = "3"
-correo           = "prof.garcia@colegio.edu"
+correo           = "prof.gonzalez.silva@colegio.edu"
 frase_mision     = "Cada estudiante puede dominar las matemáticas con la guía correcta."
 
 # — Textos de las cards (página de inicio) —

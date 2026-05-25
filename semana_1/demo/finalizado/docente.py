@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # SEMANA 1 — FINALIZADO: Clase Docente completa
 # Ejecutar: python docente.py
 # ============================================================
@@ -44,7 +44,7 @@ class Docente:
 
 # ── Uso: un objeto por docente, sin duplicar código ─────────
 docente_1 = Docente(
-    "Prof. García", "Matemáticas", "Colegio Dolores Sucre", 10,
+    "Prof. González Silva", "Matemáticas", "Colegio Dolores Sucre", 10,
     materias=["Álgebra — 8° grado", "Geometría — 9° grado", "Precálculo — 10° grado"],
 )
 docente_2 = Docente(
