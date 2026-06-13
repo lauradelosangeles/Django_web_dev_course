@@ -30,6 +30,9 @@ Completas `/contacto/`: el visitante envía nombre, correo y mensaje; Django los
 | **Demo** | `demo/inicio/` → `demo/finalizado/` | Formulario POST, CSRF y producción | Partes de la semana 4 sin formulario de contacto. En vivo creas `ContactoForm`, la vista `contacto()` (GET/POST), plantilla con `{% csrf_token %}`, `.env` y ajustes de `settings.py`. El finalizado incluye mensajes guardados en BD y configuración lista para desplegar. |
 | **Actividad en clase** | `ejercicio_clase/plantilla/` | Vista `contacto()` | `forms.py` y plantilla ya están dados. Personalizas datos del docente y completas `contacto()` para validar el formulario, guardar `Mensaje` y mostrar confirmación con `messages`. Criterio: el formulario persiste mensajes en la BD. |
 | **Tarea** | `tarea/plantilla_tarea/` | Despliegue en PythonAnywhere | Personalizas el Hub, pruebas el formulario en local, adaptas mensaje de éxito y sigues la guía del README para publicar en PythonAnywhere (migrate, variables de entorno, `collectstatic`, WSGI). Entrega: URL pública del Hub en funcionamiento. |
+| **Pruebas funcionales y de carga** | `pruebas/` | Casos de prueba y simulación de carga | Ejecutas manualmente los 3 casos prellenados de `casos_de_prueba.md` (formulario vacío, correo inválido, datos válidos) y lees la sección sobre pruebas de carga para entender cómo simular envíos repetidos. |
+| **Ética y protección de datos** | `etica_datos.md` | LOPDP y aviso de privacidad | Lees los principios de la Ley Orgánica de Protección de Datos Personales de Ecuador aplicados al formulario de contacto y añades el aviso de privacidad debajo del formulario en `contacto.html`. |
+| **Documentación** | `MANUAL.md` (raíz) | Manual técnico y de usuario | Consultas el manual técnico para instalación, estructura de carpetas y mantenimiento, y la guía de usuario para operar las cuatro secciones del Hub (inicio, recursos, contacto, admin). |
 
 ---
 
@@ -178,3 +181,6 @@ Con el despliegue, el Hub queda en línea: inicio, acerca, recursos, contacto y 
 
 **Prompt 4 — Error 403:**
 > "Mi formulario Django da 403 al enviar. ¿Cuál es la causa más común y cómo la corrijo en la plantilla HTML?"
+
+**Prompt 5 — Tabla de casos de prueba:**
+> "Redacta una tabla de casos de prueba para un formulario de contacto Django (campos nombre, correo, mensaje) cubriendo entradas válidas e inválidas."

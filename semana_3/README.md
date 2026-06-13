@@ -28,6 +28,7 @@ Creas `templates/base.html` con Bootstrap 5 y páginas `hub/inicio.html`, `acerc
 | **Demo** | `demo/inicio/` → `demo/finalizado/` | `render()` y herencia de plantillas | El inicio conserva vistas con `HttpResponse` y `base.html` vacío. En vivo refactorizas a `render()`, construyes `templates/base.html` (Bootstrap, navbar) e `hub/inicio.html` con `{% extends %}`. El finalizado tiene tres páginas con plantillas y contexto. |
 | **Actividad en clase** | `ejercicio_clase/plantilla/` | Vistas `acerca()` y `recursos_view()` | Personalizas datos del docente. `inicio()` ya usa `render()`. Conviertes `acerca()` a plantilla y creas `recursos_view()` que pasa `recursos_lista` a `hub/recursos.html`. Criterio: las 3 URLs usan plantillas, sin `HttpResponse`. |
 | **Tarea** | `tarea/plantilla_tarea/` | Página de recursos propia | Completas variables, revisas `inicio()` y `acerca()` dadas, armas una lista de al menos 3 recursos reales de tu materia y completas `recursos_view()` + plantilla. Criterio: las 3 URLs muestran tu contenido. |
+| **Diseño previo** | `diseno/` | Requisitos y wireframe | Antes de programar, rellenas la tabla de requisitos funcionales y no funcionales (`requisitos.md`), bocetas la pantalla `/recursos/` en papel o herramienta digital (`wireframe_recursos.md`) y te autoevalúas con la rúbrica de usabilidad y accesibilidad (`rubrica_usabilidad.md`). |
 
 ---
 
@@ -131,3 +132,6 @@ Los recursos viven en listas fijas dentro del código. La semana 4 los guarda en
 
 **Prompt 4 — Condicional en plantilla:**
 > "En recursos.html, agrega un {% if recursos %}...{% else %}...{% endif %} que muestre '¡Aún no hay recursos disponibles!' cuando la lista esté vacía."
+
+**Prompt 5 — Revisión de accesibilidad:**
+> "Revisa este HTML y dime qué mejoras de accesibilidad necesita (alt, roles ARIA, contraste, jerarquía de encabezados) para cumplir buenas prácticas."

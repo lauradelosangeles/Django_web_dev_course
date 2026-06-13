@@ -16,7 +16,7 @@ correo           = "prof.gonzalez.silva@colegio.edu"
 frase_mision     = "Cada estudiante puede dominar las matemáticas con la guía correcta."
 
 # — Textos de las cards (página de inicio) —
-icono_materia      = "📐"
+icono_materia      = "🖥️"
 desc_card_sobre_mi = f"Mi trayectoria, filosofía docente y {anos_experiencia} años formando estudiantes en {materia}."
 desc_card_materias = f"Grupos activos este semestre con materiales y actividades actualizados en {institucion}."
 desc_card_recursos = "Materiales, ejercicios y sitios de referencia para reforzar el aprendizaje."

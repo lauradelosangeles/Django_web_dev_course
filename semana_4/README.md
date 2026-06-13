@@ -31,6 +31,8 @@ Las vistas dejan las listas fijas y leen `Recurso.objects.all()` desde la base d
 | **Demo** | `demo/inicio/` → `demo/finalizado/` | Modelos, migraciones y Panel Admin | Partes de la semana 3 (plantillas listas) con `models.py` vacío. En vivo defines `Recurso` y `Mensaje`, ejecutas `makemigrations` + `migrate`, creas superusuario, registras modelos en `admin.py` y conectas `recursos_view()` al ORM. |
 | **Actividad en clase** | `ejercicio_clase/plantilla/` | Modelo `Recurso` y datos reales | Personalizas el Hub, defines el modelo `Recurso` en `models.py`, corres migraciones, cargas al menos 3 recursos desde `/admin/` y verificas que `/recursos/` los muestra. Entrega: captura del admin + página funcionando. |
 | **Tarea** | `tarea/plantilla_tarea/` | Modelo `Mensaje` | `Recurso` ya está definido; creas el modelo `Mensaje` desde cero, lo registras en el admin, migras la BD y cargas 5 recursos reales de tu materia. Refuerzas el flujo completo modelo → admin → vista. |
+| **Diseño del modelo de datos** | `diseno/` | Modelo E/R e historias de usuario | Antes de programar, documentas las tablas `Recurso` y `Mensaje` en `modelo_datos.md` (campos, tipos, claves) y escribes 3 historias de usuario en `historias_usuario.md` para que cada funcionalidad esté centrada en las necesidades del docente. |
+| **Prueba unitaria** | `demo/finalizado/hub/tests.py` | TDD básico con TestCase | Ejecutas `python manage.py test` en `semana_4/demo/finalizado/` y verificas que las 2 pruebas pasan: creación de un `Recurso` y que `__str__` devuelve el título. El archivo de tarea incluye un TODO para que el docente escriba el test de `Mensaje`. |
 
 ---
 
@@ -141,3 +143,6 @@ El admin gestiona datos por dentro; falta que el visitante envíe mensajes desde
 
 **Prompt 4 — Filtrar en el admin:**
 > "En MensajeAdmin, agrega list_filter por 'leido' y list_editable = ['leido'] para marcar mensajes como leídos desde la lista."
+
+**Prompt 5 — Prueba unitaria con TestCase:**
+> "Crea un test de Django que verifique que al crear un Recurso, objects.count() aumenta en 1 y que str(recurso) devuelve su título."

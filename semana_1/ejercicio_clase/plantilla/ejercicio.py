@@ -37,7 +37,10 @@ class Docente:
     #    que imprima tres líneas con los atributos del docente."
     # ============================================================
 
-    # ESCRIBE EL MÉTODO AQUÍ ↓
+    def presentarse(self):
+        print(f"Hola, soy {self.nombre}.")
+        print(f"Enseño {self.materia} en {self.institucion}.")
+        print(f"Tengo {self.anos_experiencia} años de experiencia.")
 
 
 # Prueba tu clase con tus datos reales
