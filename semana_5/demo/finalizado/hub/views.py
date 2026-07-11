@@ -6,8 +6,8 @@ from .forms import ContactoForm, ContactoFormEN
 # ════════════════════════════════════════════════════════════
 #  ZONA DE PERSONALIZACIÓN — edita solo esta sección
 # ════════════════════════════════════════════════════════════
-nombre_docente   = "Prof. González Silva"
-iniciales        = "PG"
+nombre_docente   = "Prof. Laura Herrera"
+iniciales        = "LH"
 materia          = "Matemáticas"
 institucion      = "Colegio Dolores Sucre"
 anos_experiencia = "10"
