@@ -11,12 +11,12 @@ iniciales        = "LH"
 materia          = "Programación estructurada"
 institucion      = "Unidad Educativa Fiscal Dolores Sucre"
 anos_experiencia = "25"
-num_estudiantes  = "320"
+num_estudiantes  = "12 mil"
 num_materias     = "3"
 correo           = "angeles.herrera@docentes.edu.ec"
-frase_mision     = "Cada estudiante puede dominar las matemáticas con la guía correcta."
+frase_mision     = "Desarrollar software eficiente y legible, aplicando los fundamentos de la programación estructurada para asegurar un código robusto y fácil de mantener."
 
-icono_materia      = "📐"
+icono_materia      = "💾"
 desc_card_sobre_mi = f"Mi trayectoria, filosofía de enseñanza y {anos_experiencia} años formando estudiantes en {materia}."
 desc_card_materias = f"Grupos activos este semestre con materiales y actividades en {institucion}."
 desc_card_recursos = "Materiales y herramientas disponibles en la base de datos de recursos."
@@ -71,7 +71,7 @@ def contacto(request):
             )
             messages.success(
                 request,
-                f'¡Gracias, {form.cleaned_data["nombre"]}! Tu mensaje fue recibido. Te responderé pronto.',
+                f'¡Gracias, {form.cleaned_data["nombre"]}! Tu mensaje fue recibido. Te responderé pronto, cuando este disponible de mi tiempo.',
             )
             return redirect('contacto')
         else:
