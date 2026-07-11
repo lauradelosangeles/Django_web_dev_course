@@ -1,25 +1,26 @@
 ﻿/* Estilos personalizados del Hub Docente */
 
 :root {
-    --color-primario: #2D4A7A;
-    --color-acento:   #E8833A;
+    --color-primario: #4F46E5;
+    --color-acento:   #FF6B6B;
 }
 
 body {
-    background-color: #f8f7f4;
+    background-color:linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%);
 }
 
 .navbar-brand {
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
 }
 
 .card {
-    border-radius: 10px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(45, 74, 122, 0.15) !important;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.12) !important;
 }
