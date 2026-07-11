@@ -88,15 +88,15 @@ def contacto(request):
 def _ctx_en(extra=None):
     """Context helper with English content and stat labels."""
     base = {
-        'nombre_docente': 'Teacher Gonzalez Silva',
+        'nombre_docente': 'Teacher Laura Herrera',
         'iniciales': iniciales,
-        'materia': 'Mathematics',
-        'institucion': 'School Piquero',
+        'materia': 'Structured Programming',
+        'institucion': 'Dolores Sucre Public School',
         'anos_experiencia': anos_experiencia,
         'num_estudiantes': num_estudiantes,
         'num_materias': num_materias,
-        'correo': 'prof.gonzalezsilva@school.edu',
-        'frase_mision': 'Every student can master mathematics with the right guidance.',
+        'correo': 'angeles.herrera@docentes.edu.ec',
+        'frase_mision': 'Develop efficient and readable software, applying the fundamentals of structured programming to ensure robust and easy-to-maintain code.',
         'icono_materia': icono_materia,
         'stat_lbl_anos': 'Years of Experience',
         'stat_lbl_estudiantes': 'Students Taught',
