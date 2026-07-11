@@ -8,12 +8,12 @@ from .forms import ContactoForm, ContactoFormEN
 # ════════════════════════════════════════════════════════════
 nombre_docente   = "Prof. Laura Herrera"
 iniciales        = "LH"
-materia          = "Matemáticas"
-institucion      = "Colegio Dolores Sucre"
-anos_experiencia = "10"
+materia          = "Programación estructurada"
+institucion      = "Unidad Educativa Fiscal Dolores Sucre"
+anos_experiencia = "25"
 num_estudiantes  = "320"
 num_materias     = "3"
-correo           = "prof.garcia@colegio.edu"
+correo           = "angeles.herrera@docentes.edu.ec"
 frase_mision     = "Cada estudiante puede dominar las matemáticas con la guía correcta."
 
 icono_materia      = "📐"
