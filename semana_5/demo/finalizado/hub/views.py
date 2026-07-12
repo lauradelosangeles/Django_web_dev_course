@@ -6,12 +6,12 @@ from .forms import ContactoForm, ContactoFormEN
 # ════════════════════════════════════════════════════════════
 #  ZONA DE PERSONALIZACIÓN — edita solo esta sección
 # ════════════════════════════════════════════════════════════
-nombre_docente   = "Prof. Laura Herrera"
+nombre_docente   = "Magister Laura Herrera Herrera"
 iniciales        = "LH"
 materia          = "Programación estructurada"
 institucion      = "Unidad Educativa Fiscal Dolores Sucre"
 anos_experiencia = "25"
-num_estudiantes  = "12 mil"
+num_estudiantes  = "12000"
 num_materias     = "3"
 correo           = "angeles.herrera@docentes.edu.ec"
 frase_mision     = "Desarrollar software eficiente y legible, aplicando los fundamentos de la programación estructurada para asegurar un código robusto y fácil de mantener."
